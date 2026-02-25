@@ -1,0 +1,167 @@
+/* --- RESET E CONFIGURAÇÕES MODERNAS --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth; /* Faz a tela deslizar devagarzinho */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1009; /* Fundo ainda mais escuro pra dar contraste */
+    color: #e0e0e0;
+}
+
+/* --- TÍTULOS GERAIS DAS SEÇÕES --- */
+.section-title {
+    text-align: center;
+    color: #f4c430; /* Dourado */
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- CABEÇALHO --- */
+.main-header {
+    background-color: #ff7b00; 
+    text-align: center;
+    padding: 30px 0 15px 0;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    border: none;
+}
+
+/* --- MENU STICKY (Moderno) --- */
+.navbar {
+    background-color: #2c1a0e;
+    padding: 15px 0;
+    position: sticky; /* Fica preso no topo ao rolar */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover { color: #f4c430; }
+
+.menu-destaque {
+    background-color: #f4c430;
+    color: #1a1009 !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.menu-destaque:hover { background-color: #fff; }
+
+/* --- HERO (Banner) --- */
+.hero {
+    height: 85vh;
+    background-image: linear-gradient(rgba(26, 16, 9, 0.6), rgba(26, 16, 9, 0.9)), url('banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 { font-size: 3.5rem; color: #fff; margin-bottom: 15px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; color: #ccc; }
+
+.btn-gold {
+    padding: 15px 40px;
+    background-color: #f4c430;
+    color: #1a1009;
+    border: none;
+    border-radius: 8px; /* Borda arredondada moderna */
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #fff;
+    transform: translateY(-3px); /* Levanta o botão quando passa o mouse */
+    box-shadow: 0 10px 20px rgba(244, 196, 48, 0.2);
+}
+
+/* --- PORTFÓLIO (CSS GRID MODERNO) --- */
+.portfolio-section { padding: 80px 5%; background-color: #22150c; }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo automático */
+    gap: 25px;
+}
+
+.gallery-item {
+    overflow: hidden; /* Importante pro efeito de zoom */
+    border-radius: 12px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Transição suave do zoom */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Dá zoom na foto quando passa o mouse! */
+}
+
+/* --- SOBRE --- */
+.sobre-section { padding: 80px 10%; background-color: #1a1009; }
+.sobre-container { text-align: center; max-width: 800px; margin: 0 auto; }
+.sobre-texto p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; color: #bbb; }
+
+/* --- CONTATO --- */
+.contato-section {
+    padding: 80px 10%;
+    background-color: #22150c;
+    text-align: center;
+}
+.contato-info p { font-size: 1.2rem; margin-bottom: 15px; }
+.contato-info a { color: #f4c430; text-decoration: none; }
+.contato-info a:hover { text-decoration: underline; }
+.contato-info .btn-gold { margin-top: 30px; }
+
+/* --- RODAPÉ --- */
+footer { background-color: #110a05; text-align: center; padding: 20px; font-size: 0.9rem; color: #777; }
+
+/* --- MODAL (Continua igual, só dei uma arredondada maior nas bordas) --- */
+.modal-container { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background-color: #1e1e1e; padding: 30px; border-radius: 16px; width: 90%; max-width: 400px; position: relative; border: 1px solid #333; }
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; color: #888; cursor: pointer; transition: color 0.3s; }
+.close-btn:hover { color: #f4c430; }
+.modal-content h3 { color: #fff; text-align: center; margin-bottom: 20px; font-size: 1.5rem; }
+.modal-content input, .modal-content select, .modal-content textarea { width: 100%; padding: 14px; margin-bottom: 15px; background-color: #2a2a2a; border: none; border-radius: 8px; color: white; font-family: inherit; }
+.modal-content input:focus, .modal-content select:focus, .modal-content textarea:focus { outline: 2px solid #f4c430; }
+.btn-zap { width: 100%; padding: 15px; background-color: #25D366; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: background 0.3s; }
+.btn-zap:hover { background-color: #1ebe5d; }
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+    .navbar ul { flex-direction: column; gap: 15px; padding: 20px; }
+    .hero h2 { font-size: 2.2rem; }
+}
