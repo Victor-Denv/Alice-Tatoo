@@ -162,6 +162,17 @@ footer { background-color: #110a05; text-align: center; padding: 20px; font-size
 
 /* Responsivo para celular */
 @media (max-width: 768px) {
-    .navbar ul { flex-direction: column; gap: 15px; padding: 20px; }
-    .hero h2 { font-size: 2.2rem; }
+    .navbar {
+        position: relative; /* ISSO AQUI RESOLVE O PROBLEMA! Tira o efeito grudado no celular */
+    }
+    
+    .navbar ul { 
+        flex-direction: column; 
+        gap: 15px; 
+        padding: 20px; 
+    }
+    
+    .hero h2 { 
+        font-size: 2.2rem; 
+    }
 }
